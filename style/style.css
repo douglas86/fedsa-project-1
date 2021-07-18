@@ -15,7 +15,7 @@ li {
   font-size: 22px;
   line-height: 26px;
 }
-a {
+.nav-links {
   color: #1d1d1d;
   text-decoration: none;
 }
@@ -28,5 +28,8 @@ a {
   }
   li {
     display: inline;
+  }
+  img {
+    margin-top: 10px;
   }
 }
