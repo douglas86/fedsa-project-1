@@ -2,6 +2,7 @@ html {
   height: 100vh;
   width: 100%;
 }
+/* header */
 .page-header {
   display: column;
   text-align: center;
@@ -15,10 +16,12 @@ html {
   font-size: 22px;
   line-height: 26px;
 }
+/* nav element inside of the header component */
 .nav-links {
   color: #1d1d1d;
   text-decoration: none;
 }
+/* footer */
 footer {
   text-align: center;
 }
@@ -37,6 +40,7 @@ footer {
   display: inline-block;
 }
 
+/* media queries for desktop design */
 @media (min-width: 640px) {
   .page-header {
     display: flex;
@@ -49,6 +53,7 @@ footer {
   img {
     margin-top: 10px;
   }
+  /* footer desktop design */
   footer {
     display: flex;
     justify-content: space-between;
