@@ -9,7 +9,7 @@ html {
   padding: 20px;
   background: #ffffff;
 }
-li {
+.heading-links {
   list-style-type: none;
   margin-right: 40px;
   font-size: 22px;
@@ -18,6 +18,23 @@ li {
 .nav-links {
   color: #1d1d1d;
   text-decoration: none;
+}
+footer {
+  text-align: center;
+}
+.footer-unordered-lists {
+  list-style-type: none;
+  margin-left: -41px;
+}
+.footer-links {
+  font-size: 15px;
+  display: row;
+  color: #1d1d1d;
+  text-decoration: none;
+}
+.footer-lists {
+  position: relative;
+  display: inline-block;
 }
 
 @media (min-width: 640px) {
@@ -31,5 +48,24 @@ li {
   }
   img {
     margin-top: 10px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer h4 {
+    margin-bottom: 2px;
+  }
+  .footer-unordered-lists {
+    display: block;
+  }
+  .footer-heading1 {
+    float: left;
+  }
+  .footer-heading2 {
+    float: center;
+  }
+  .footer-heading3 {
+    float: right;
   }
 }
