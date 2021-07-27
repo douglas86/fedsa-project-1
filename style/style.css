@@ -158,8 +158,11 @@ footer {
   .card {
     display: grid;
   }
-  .card-chair-img {
+  .card-chair-img:nth-child(odd) {
     float: left;
+  }
+  .card:nth-child(2) {
+    color: red;
   }
   .card p {
     visibility: visible;
