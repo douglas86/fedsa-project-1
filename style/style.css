@@ -109,6 +109,8 @@ h3 {
 /* footer */
 footer {
   text-align: center;
+  background-color: #f9f9f9;
+  width: 100%;
 }
 .footer-unordered-lists {
   list-style-type: none;
