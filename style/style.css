@@ -1,13 +1,12 @@
 html {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 /* header */
 .page-header {
   display: column;
   text-align: center;
   font-family: Roboto;
-  padding: 20px;
   background: #ffffff;
 }
 .heading-links {
@@ -32,14 +31,13 @@ html {
   outline-style: solid;
   outline-color: #ffffff;
   outline-offset: -12px;
-  padding: 1px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 50px;
   font-size: 30px;
   font-weight: 500;
 }
-button {
+.banner-button {
   margin: 40px 25% 20px 32%;
   font-family: Roboto;
   font-style: normal;
@@ -52,7 +50,60 @@ button {
   color: #c48b98;
   background-color: transparent;
   border: 4px solid #c48b98;
-  padding: 3%;
+}
+
+/* product card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.prices li {
+  list-style-type: none;
+}
+.prices {
+  margin-right: 20%;
+}
+.prices-top {
+  color: #8c8c8c;
+  text-decoration: line-through;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.prices-bottom {
+  font-size: 32px;
+  margin-top: -30px;
+}
+.text-container-bottom {
+  display: flex;
+}
+.text-container-top p {
+  visibility: hidden;
+}
+.icons button {
+  border-color: transparent;
+  background-color: #ffffff;
+  width: 38px;
+  height: auto;
+  margin: 20px;
+}
+h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 45px;
+  margin-bottom: 20px;
+}
+
+.load-more {
+  margin: 20px 50%;
+}
+.load-more button {
+  background-color: #c48b98;
+  color: #ffffff;
+  font-style: Roboto;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 25px;
 }
 
 /* footer */
@@ -79,18 +130,16 @@ footer {
   .page-header {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
   }
-  li {
+  nav li {
     display: inline;
   }
-  img {
+  .page-header img {
     margin-top: 10px;
   }
   /* banner desktop design */
   .banner {
-    height: 2%;
-    padding: 2px;
+    display: flex;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -99,19 +148,89 @@ footer {
   }
   .banner-text {
     outline-offset: 10px;
-    margin: 20px 80px;
+    margin: 56px 30%;
+    padding: 55px;
     line-height: 0;
   }
-  button {
-    /* margin: 40px 25% 20px 32%; */
-    padding: 10px;
-    display: grid;
+  .banner-button {
     margin: auto;
   }
+
+  /* product cards */
+  .card {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .image-container {
+    width: 50%;
+  }
+  .chair-image {
+    width: 100%;
+    height: auto;
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 22px;
+  }
+  .text-container-top p {
+    visibility: visible;
+  }
+  .text-container-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .prices li {
+    list-style-type: none;
+  }
+  .prices-top {
+    color: #8c8c8c;
+    text-decoration: line-through;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .prices-bottom {
+    font-size: 32px;
+    margin-top: -30px;
+  }
+  .icons button {
+    border-color: transparent;
+    background-color: #ffffff;
+    width: 38px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  .cards .card:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  /* load-more button */
+  .load-more {
+    margin: 20px 40%;
+  }
+  .load-more button {
+    padding: 2px 100px;
+  }
+
   /* footer desktop design */
   footer {
     display: flex;
     justify-content: space-between;
+    background-color: #f9f9f9;
+    width: 100%;
   }
   footer h4 {
     margin-bottom: 2px;
