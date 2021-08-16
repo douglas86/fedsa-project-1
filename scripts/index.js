@@ -12,3 +12,20 @@ function fetching() {
 }
 
 setInterval(5000, fetching());
+
+const root = document.getElementById("root");
+console.log(root);
+
+function generateProductCard() {
+  //
+  const div = document.createElement("div");
+  div.textContent = "This was generated with JS";
+  return div;
+}
+
+function render() {
+  const productCard = generateProductCard();
+  root.appendChild(productCard);
+}
+
+render();
