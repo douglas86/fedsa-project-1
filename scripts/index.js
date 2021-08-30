@@ -9,7 +9,7 @@ function fetching() {
     .catch((err) => console.log(err));
 }
 
-// setInterval(5000, fetching());
+fetching();
 
 const root = document.getElementById("root");
 
@@ -113,6 +113,10 @@ function generateProductCard(arr) {
       `${icon[index]}`,
       `product-card-button-${icon[index]}`
     );
+
+    // event listener on click of cart button
+    btn.addEventListener("click", () => shoppingCart.addToCart(item));
+
     btn.appendChild(image);
   });
 
@@ -159,3 +163,30 @@ function render() {
 }
 
 render();
+
+// once cart is clicked add an item to items array
+const shoppingCart = (function () {
+  const items = [];
+
+  function getItems() {
+    return items;
+  }
+
+  function addToCart(item) {
+    items.push(item);
+    console.log("items", items);
+  }
+
+  function getTotalCost() {
+    //
+    let totalCost = 0
+  }
+
+  return {
+    getItems,
+    addToCart,
+    getTotalCost,
+  };
+})();
+
+console.log(shoppingCart.getItems());
