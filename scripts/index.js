@@ -116,7 +116,7 @@ function generateProductCard(arr) {
 
     // event listener on click of cart button
     btn.addEventListener("click", () => shoppingCart.addToCart(item));
-
+    btn.addEventListener("click", () => shoppingCart.getTotalCost(arr[4]));
     btn.appendChild(image);
   });
 
@@ -164,6 +164,8 @@ function render() {
 
 render();
 
+let totalCost = 0;
+
 // once cart is clicked add an item to items array
 const shoppingCart = (function () {
   const items = [];
@@ -177,9 +179,14 @@ const shoppingCart = (function () {
     console.log("items", items);
   }
 
-  function getTotalCost() {
+  function getTotalCost(price) {
     //
-    let totalCost = 0
+
+    // const splitAtR = price.split('R')
+    // const splitAtC = splitAtR[1].split[',']
+    let removeUnwanted = parseFloat(price.replace(/\R|,/g, ""));
+    totalCost += removeUnwanted;
+    return totalCost;
   }
 
   return {
