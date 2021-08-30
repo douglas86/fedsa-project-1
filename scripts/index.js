@@ -186,7 +186,7 @@ const shoppingCart = (function () {
     // const splitAtC = splitAtR[1].split[',']
     let removeUnwanted = parseFloat(price.replace(/\R|,/g, ""));
     totalCost += removeUnwanted;
-    return totalCost;
+    // return totalCost;
   }
 
   return {
@@ -195,5 +195,10 @@ const shoppingCart = (function () {
     getTotalCost,
   };
 })();
+
+let costs = document.getElementById("totalPrice");
+costs.innerHTML = `${totalCost}`;
+
+console.log(totalCost)
 
 console.log(shoppingCart.getItems());
